@@ -1,0 +1,18 @@
+<view class="MyTitle">
+    <!-- bilibli图标 -->
+    <navigator class="icon">
+        <image src="../../icons/logo.png" style="width: 140rpx;height: 60rpx;"></image>
+    </navigator>
+    <!-- 搜索图标 -->
+    <view class="search">
+        <image src="../../icons/search.png" style="width: 60rpx;height: 44rpx;"></image>
+    </view>
+    <!-- 用户图标 -->
+    <view class="user">
+        <image src="../../icons/user.png" style="width: 54rpx;height: 60rpx;"></image>
+    </view>
+    <!-- 下载App -->
+    <view class="down_app">
+        <text>下载App</text>
+    </view>
+</view>
