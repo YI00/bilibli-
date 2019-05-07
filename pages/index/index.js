@@ -7,7 +7,9 @@ Page({
     // 首页导航数据
     navList:[],
     //被点击的首页导航的index
-    currentNavIndex:0
+    currentNavIndex:0,
+    // 轮播图数据
+    swiperList:[]
   },
 
   // 获取首页导航数据
@@ -34,13 +36,30 @@ Page({
     })
   },
 
+  // 获取轮播图数据
+  getSwiperList(){
+    let that=this;
+    wx.request({
+      url:"https://easy-mock.com/mock/5c1dfd98e8bfa547414a5278/bili/swiperList",
+      success(res){
+        console.log(res)
+        if(res.data.code===0){
+          that.setData({
+            swiperList:res.data.data.swiperList
+          })
+        }
+      }
+    })
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
     // 1.获取首页导航数据
     this.getNavList()
-    
+    // 2.获取轮播图数据
+    this.getSwiperList()
   },
 
   /**

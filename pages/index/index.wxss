@@ -14,3 +14,17 @@
 .nav_item.active{
     border-bottom: 5px solid #de688b; 
 }
+
+/* 轮播图 */
+.swiper_wrap{
+    height: 220rpx;
+    margin-top: 10rpx;
+}
+swiper{
+    width: 100%;
+    height: 100%;
+}
+.swiper_wrap image{
+    width: 100%;
+    height: 100%;
+}
