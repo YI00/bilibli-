@@ -21,7 +21,7 @@
     </view>
     <!-- 视频列表 -->
     <view class="videos_wrap">
-        <navigator wx:for="{{videosList}}" wx:key="{{index}}">
+        <navigator url="../detail/detail?id={{item.id}}" wx:for="{{videosList}}" wx:key="{{index}}">
             <!-- 图片容器 -->
             <view class="img_wrap">
                 <!-- 图片 -->
