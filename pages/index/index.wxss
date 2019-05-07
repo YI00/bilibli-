@@ -28,3 +28,43 @@ swiper{
     width: 100%;
     height: 100%;
 }
+
+/* 视频列表 */
+.videos_wrap{
+    display: flex;
+    padding: 5rpx;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.videos_wrap navigator{
+    width: 48%;
+    margin-bottom: 20rpx;
+}
+.img_wrap{
+    position: relative;
+}
+.img_wrap image{
+    width: 100%;
+    border-radius: 10rpx;    
+}
+.img_wrap .img_info{
+    position: absolute;
+    bottom:10rpx;
+    left:0;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    color: #fff;
+    font-size: 24rpx;
+}
+.video_title{
+    font-size: 28rpx;
+    color: #666;
+    display: -webkit-box;
+    overflow: hidden;
+    white-space: normal;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    line-clamp: 2;
+    box-orient: vertical;
+}

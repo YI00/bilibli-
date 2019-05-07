@@ -9,7 +9,9 @@ Page({
     //被点击的首页导航的index
     currentNavIndex:0,
     // 轮播图数据
-    swiperList:[]
+    swiperList:[],
+    // 视频列表数据
+    videosList:[]
   },
 
   // 获取首页导航数据
@@ -52,6 +54,22 @@ Page({
     })
   },
 
+  // 获取视频列表数据
+  getVideosList(){
+    let that=this
+    wx.request({
+      url:"https://easy-mock.com/mock/5c1dfd98e8bfa547414a5278/bili/videosList",
+      success(res){
+        console.log(res)
+        if(res.data.code===0){
+          that.setData({
+            videosList:res.data.data.videosList
+          })
+        }
+      }
+    })
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */
@@ -59,7 +77,9 @@ Page({
     // 1.获取首页导航数据
     this.getNavList()
     // 2.获取轮播图数据
-    this.getSwiperList()
+    this.getSwiperList(),
+    // 3.获取视频列表详情
+    this.getVideosList()
   },
 
   /**
