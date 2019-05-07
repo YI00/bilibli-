@@ -5,7 +5,9 @@ Page({
    */
   data: {
     // 首页导航数据
-    navList:[]
+    navList:[],
+    //被点击的首页导航的index
+    currentNavIndex:0
   },
 
   // 获取首页导航数据
@@ -15,7 +17,7 @@ Page({
       url:"https://easy-mock.com/mock/5c1dfd98e8bfa547414a5278/bili/navList",
       success(res){
         if(res.data.code===0){
-          console.log(res)
+          // console.log(res)
           that.setData({
             navList:res.data.data.navList
           })
@@ -24,11 +26,21 @@ Page({
     })
   },
 
+  // 点击时index改变
+  activeNav(e){
+    // console.log(e.target.dataset)
+    this.setData({
+      currentNavIndex:e.target.dataset.index
+    })
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    // 1.获取首页导航数据
     this.getNavList()
+    
   },
 
   /**

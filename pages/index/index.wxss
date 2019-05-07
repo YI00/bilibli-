@@ -1,0 +1,16 @@
+/* 首页导航 */
+.nav_wrap{}
+.nav{
+    white-space: nowrap;
+    /* 段落中的文本不换行 */
+    padding: 5rxp 0;
+    font-size: 30rpx;
+    color: #666;
+}
+.nav_item{
+    display: inline-block;
+    padding: 20rpx 45rpx;
+}
+.nav_item.active{
+    border-bottom: 5px solid #de688b; 
+}
