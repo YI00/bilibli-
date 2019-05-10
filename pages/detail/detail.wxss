@@ -3,13 +3,11 @@ page{
     color: #666;
 }
 /* 视频*/
-.video_wrap{
-  
-}
+
 .video_wrap video{
     width: 100%;
 }
-.video_meg{}
+
 .video_title{
     font-size: 35rpx;
 }
@@ -63,11 +61,11 @@ page{
 }
 
 /* 评论列表 */
-.comment_wrap{}
+
 .comment_title{
     font-size: 28rpx;
 }
-.comment_list{}
+
 .comment_item{
     display: flex;
     border-bottom: 1px solid #666;
